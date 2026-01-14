@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="bg-black text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>都能找 | Lost & Found Divination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 【关键操作】：你必须把下面的内容替换为你自己的 Supabase 项目参数
+        window._ENV_ = {
+            SUPABASE_URL: 'https://xyz.supabase.co', // 这里替换成你的 Project URL
+            SUPABASE_KEY: 'eyJhbGciOiJIUzI1Ni...'    // 这里替换成你的 anon key
+        };
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap');
+        
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        input, textarea {
+            -webkit-touch-callout: default;
+            -webkit-user-select: text;
+            user-select: text;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        
+        @keyframes origin-voyage {
+            0% { transform: scale(0.5); opacity: 0; filter: blur(20px); }
+            40% { transform: scale(1); opacity: 1; filter: blur(0px); }
+            100% { transform: scale(1.5); opacity: 0; filter: blur(30px); }
+        }
+
+        .animate-origin-deep { 
+            animation: origin-voyage 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        ::-webkit-calendar-picker-indicator { 
+            filter: invert(1);
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
